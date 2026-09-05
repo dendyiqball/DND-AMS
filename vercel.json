@@ -1,7 +1,18 @@
 {
-  "build": {
-    "env": {
-      "COMPOSER_ALLOW_SUPERUSER": "1"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "dnd-ams": {
+      "root": ".",
+      "entrypoint": "Dockerfile.vercel",
+      "runtime": "container"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "dnd-ams"
+      }
+    }
+  ]
 }
