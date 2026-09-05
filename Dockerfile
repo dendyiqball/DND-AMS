@@ -1,6 +1,6 @@
 FROM dunglas/frankenphp:php8.3
 
-RUN install-php-extensions gd
+RUN install-php-extensions gd zip
 
 WORKDIR /app
 
