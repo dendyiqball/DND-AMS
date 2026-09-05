@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "COMPOSER_ALLOW_SUPERUSER": "1"
+    }
+  }
+}
