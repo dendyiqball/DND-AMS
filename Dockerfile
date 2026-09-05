@@ -16,8 +16,8 @@ RUN php artisan storage:link || true
 
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-ENV SERVER_NAME=:8080
+ENV SERVER_NAME=:80
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["frankenphp", "php-server", "--listen", ":8080", "--root", "/app/public"]
+CMD ["frankenphp", "php-server", "--listen", ":80", "--root", "/app/public"]
